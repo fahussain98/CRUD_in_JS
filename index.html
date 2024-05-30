@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User Management</h1>
+        <button onclick="showCreateForm()">Add New User</button>
+        
+        <div id="createForm" class="form-container">
+            <h2>Add User</h2>
+            <input type="text" id="name" placeholder="Name">
+            <input type="email" id="email" placeholder="Email">
+            <button onclick="addUser()">Save</button>
+            <button onclick="hideForm('createForm')">Cancel</button>
+        </div>
+
+        <div id="updateForm" class="form-container">
+            <h2>Edit User</h2>
+            <input type="hidden" id="editId">
+            <input type="text" id="editName" placeholder="Name">
+            <input type="email" id="editEmail" placeholder="Email">
+            <button onclick="updateUser()">Update</button>
+            <button onclick="hideForm('updateForm')">Cancel</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="userList">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
